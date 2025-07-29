@@ -1,0 +1,10 @@
+/** @format */
+
+.home {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home h2 {
+  margin-bottom: 20px;
+}
