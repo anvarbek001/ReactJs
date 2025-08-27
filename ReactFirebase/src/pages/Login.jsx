@@ -1,13 +1,14 @@
 /** @format */
 
+import { Link } from "react-router-dom";
 import styles from "./Auth.module.css";
 
 const Login = () => {
-  const loading = true;
+  const loading = false;
   return (
     <div className={styles.formWrapper}>
       <form className={styles.form}>
-        <h1 className={styles.signup}>Signup</h1>
+        <h1 className={styles.signup}>Signin</h1>
         <label>
           <span>Email:</span>
           <input type="email" />
@@ -16,7 +17,9 @@ const Login = () => {
           <span>Password:</span>
           <input type="password" />
         </label>
-
+        <Link to={"/signup"}>
+          <p>Register</p>
+        </Link>
         {!loading && <button>login</button>}
         {loading && (
           <button className={styles.disabeled} disabled>
